@@ -1,0 +1,35 @@
+
+    #cartModal .modal-header {
+        background: linear-gradient(to right, #007bff, #6610f2);
+        color: white;
+    }
+
+    #cartModal .table thead {
+        background: #f8f9fa;
+        font-weight: bold;
+    }
+
+    #cartModal .table-hover tbody tr:hover {
+        background: #f1f1f1;
+        cursor: pointer;
+    }
+
+    #cartModal .btn-close-white {
+        filter: invert(1);
+    }
+
+    #cartModal .btn-outline-secondary:hover {
+        background-color: #ff0202;
+        border-color: #f8f9fa;
+        color: #000000;
+  
+    }
+
+    #cartModal .btn-success {
+        background-color: #28a745;
+        border: none;
+    }
+
+    #cartModal .btn-success:hover {
+        background-color: #218838;
+    }

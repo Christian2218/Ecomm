@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body> 
+    
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-shoe-prints"></i> NIKE SHOES</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#products">products</a>
+            <a href="#featured">featured</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+            <a href="#" id="authLink" data-bs-toggle="modal" data-bs-target="#authModal">Sign In/Sign Up</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="bi bi-cart4"></i></a>
+            <a href="#" class="fas fa-heart"></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="search here...">
+            <label class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+
+        <div class="slides-container">
+            
+            <div class="slide active">
+                <div class="content">
+                    <span>new winter</span>
+                    <h3>shoes collection</h3>
+                    <p>Try our latest shoes.</p>
+                    <button class="btn">
+                        <span>shop now</span>
+                        <i class="bi bi-arrow-left-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="images/header-1.png" alt="">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span>new winter</span>
+                    <h3>shoes collection</h3>
+                    <p>Check more color you want.</p>
+                    <button class="btn">
+                        <span>shop now</span>
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="images/header-2.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="slide-next" onclick="next()" class="fas fa-angle-right"></div>
+        <div id="slide-prev" onclick="prev()" class="fas fa-angle-left"></div>
+
+    </section>
+
+
+    <!-- latest product section starts -->
+    <section class="products" id="products">
+        <h1 class="heading"><span>latest</span> products</h1>
+        <div class="box-container">
+            <div class="box" onclick="showProductDetails('Nike Alphafly 1', '$199.00', 'images/product-1.png')">
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nike Alphafly 1</h3>
+                    <div class="price">$199.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(56)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box" onclick="showProductDetails('Nike Alphafly 2', '$500.00', 'images/product-2.png')">
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nike Alphafly 2</h3>
+                    <div class="price">$500.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(56)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+            
+            <div class="box" onclick="showProductDetails('Nike Alphafly 3', '$150.00', 'images/product-3.png')">
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nike Alphafly 3</h3>
+                    <div class="price">$150.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box" onclick="showProductDetails('Nike ZoomX Invincible 3', '$680.00', 'images/product-4.png')">
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nike ZoomX Invincible 3</h3>
+                    <div class="price">$680.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box" onclick="showProductDetails('Pegasus 41', '$590.00', 'images/product-5.png')">
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Pegasus 41</h3>
+                    <div class="price">$590.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(69)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box" onclick="showProductDetails('Gaisano Shoes', '$170.00', 'images/product-6.png')">
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Gaisano Shoes</h3>
+                    <div class="price">$170.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+            <!-- Repeat for other products with respective details -->
+        </div>
+    </section>
+
+
+    <!-- banner section starts -->
+
+    <section class="banner-container">
+
+        <div class="banner">
+            <img src="images/banner1.jpg" alt="">
+            <div class="content">
+                <span>limited offer</span>
+                <h3>upto 40% off</h3>
+                <button class="btn">
+                    <span>shop now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="images/banner2.jpg" alt="">
+            <div class="content">
+                <span>limited offer</span>
+                <h3>upto 40% off</h3>
+                <button class="btn">
+                    <span>shop now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- featured product section starts -->
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading"><span>featured</span> products</h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/product-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Nike Alphafly 1</h3>
+                        <div class="price">$159.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn add-to-cart-btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/product-2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Nike Alphafly 2</h3>
+                        <div class="price">$400.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn add-to-cart-btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/product-3.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Nike Alphafly 3</h3>
+                        <div class="price">$120.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn add-to-cart-btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/product-4.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Nike ZoomX Invincible 3</h3>
+                        <div class="price">$440.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn add-to-cart-btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/product-5.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Pegasus 41</h3>
+                        <div class="price">$472.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn add-to-cart-btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/product-6.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Gaisano Shoes</h3>
+                        <div class="price">$136.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn add-to-cart-btn">add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- review section starts -->
+    <section class="review" id="review">
+        <h1 class="heading"><span>client's</span> review</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="images/pic-1.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Jaica Barquilla</h3>
+                    <p>Right out of the box, these shoes felt like a cloud. The [specific feature, e.g., memory foam insole, cushioned midsole] provides exceptional comfort, making them perfect for all-day wear. Whether I'm running errands or hitting the gym, my feet feel supported and pain-free..</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/pic-2.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Jeffrey Alpas</h3>
+                    <p>While I haven't had these shoes for an extended period, the build quality seems impressive. The materials are sturdy, and the stitching is solid. I'm confident that these shoes will withstand the test of time..</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/pic-3.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Lexi Lore</h3>
+                    <p>The Gaisano Shoes is an excellent choice for anyone seeking a comfortable, stylish, and durable pair of shoes. They've quickly become my go-to footwear, and I highly recommend them to anyone in the market for a new pair of kicks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- send gift section starts -->
+    <section class="send">
+        <div class="container">
+            <div class="content">
+                <h2 class="title">send gift now</h2>
+                <p>g.</p>
+                <form action="">
+                    <input type="text" class="input" placeholder="House Address">
+                    <a href="#" class="btn">send</a>
+                </form>
+            </div>
+            <div class="image">
+                <img src="images/Send gift.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> us</h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/contact.png" alt="">
+            </div>
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Your Number">
+                    <input type="text" placeholder="Your Subject">
+                </div>
+                <textarea placeholder="Your Message" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <!-- footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>about us</h3>
+                <p>bb.</p>
+            </div>
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#">pricing</a>
+                <a href="#">discount</a>
+                <a href="#">refund policy</a>
+                <a href="#">shipping mode</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">products</a>
+                <a href="#">featured</a>
+                <a href="#">review</a>
+            </div>
+            <div class="box">
+                <h3>social links</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Product Details Modal -->
+<div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productDetailsModalLabel">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex align-items-center">
+                    <div class="me-4">
+                        <img id="product-image" src="" alt="Product Image" class="img-fluid" style="max-width: 200px;">
+                    </div>
+                    <div>
+                        <h3 id="product-name"></h3>
+                        <p><strong>Price: </strong><span id="product-price"></span></p>
+                        <button class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- cart modal -->
+ <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fas fa-shopping-cart"></i> Your Cart
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- Cart items will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <h5><strong>Total:</strong></h5>
+                    <h5 id="cart-total" class="text-primary">$0.00</h5>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times"></i> Close
+                </button>
+                <button class="btn btn-success" onclick="goToCheckout()">
+                    <i class="fas fa-credit-card"></i> Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+           
+
+    <!-- Sign In/Sign Up Modal -->
+    <div
+    class="modal fade"
+    id="authModal"
+    tabindex="-1"
+    aria-labelledby="authModalLabel"
+    aria-hidden="true"
+    >
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="authModalLabel">Welcome Back!</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <!-- Tab Navigation -->
+                <ul class="nav nav-pills mb-3 justify-content-center" id="authTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link active"
+                            id="signInTab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#signInForm"
+                            type="button"
+                            role="tab"
+                            aria-controls="signInForm"
+                            aria-selected="true"
+                        >
+                            Sign In
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button
+                            class="nav-link"
+                            id="signUpTab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#signUpForm"
+                            type="button"
+                            role="tab"
+                            aria-controls="signUpForm"
+                            aria-selected="false"
+                        >
+                            Sign Up
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="authTabsContent">
+                    <!-- Sign In Form -->
+                    <div
+                        class="tab-pane fade show active"
+                        id="signInForm"
+                        role="tabpanel"
+                        aria-labelledby="signInTab"
+                    >
+                        <form id="signIn" class="px-4">
+                            <div class="mb-3">
+                                <label for="signInEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="signInEmail" placeholder="Enter your email" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signInPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="signInPassword" placeholder="Enter your password" required />
+                            </div>
+                            <div class="text-end mb-3">
+                                <a href="#" class="small text-primary">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                        </form>
+                    </div>
+
+                    <!-- Sign Up Form -->
+                    <div
+                        class="tab-pane fade"
+                        id="signUpForm"
+                        role="tabpanel"
+                        aria-labelledby="signUpTab"
+                    >
+                        <form id="signUp" class="px-4">
+                            <div class="mb-3">
+                                <label for="signUpName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="signUpName" placeholder="Enter your full name" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signUpEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="signUpPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="signUpPassword" placeholder="Enter your password" required />
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- swiper js cdn link --> <!-- Bootstrap JS Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
